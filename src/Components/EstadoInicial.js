@@ -1,6 +1,8 @@
 const estadoInicial = {
-    idUsuario:0,
+    idUsuario:-1,
     Mensaje:"",
-    apiKey:""
+    apiKey:"",
+    rubros:[],
+    gastos:[]
   };
   export default estadoInicial;

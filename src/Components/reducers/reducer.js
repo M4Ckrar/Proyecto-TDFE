@@ -1,24 +1,25 @@
 import estadoInicial from "../EstadoInicial";
 
 function reducer(state = estadoInicial, action){
-    let idUsu,apiKey;
+    let idUsu,aK;
     switch(action.type){
-      case "TEST":
-        return {...state,prueba:"Segundo texto de prueba"}
-        case "GUARDAR":
-          return{...state,pronostico:action.payload, login:true}
-        case "LOGIN":
-          idUsu = action.payload.idUsu;
-          apiKey = action.payload.apiKey;
-          return {...state,idUsuario:idUsu,apiKey:apiKey}
-        case "LOGINERROR":
-          return {...state,Mensaje:action.payload.Mensaje}
-        case "REGISTER":
-          idUsu = action.payload.idUsu;
-          apiKey = action.payload.apiKey;
-          return {...state,idUsuario:idUsu,apiKey:apiKey}
-        case "REGISTERERROR":
-          return {...state,Mensaje:action.payload.Mensaje}
+      
+      case "LOGIN":
+        idUsu = action.payload.idUsu;
+        aK = action.payload.apiKey;
+        return {...state,idUsuario:idUsu,apiKey:aK}
+      case "LOGINERROR":
+        return {...state,Mensaje:action.payload.Mensaje}
+      case "REGISTER":
+        idUsu = action.payload.idUsu;
+        aK = action.payload.apiKey;
+        return {...state,idUsuario:idUsu,apiKey:aK}
+      case "REGISTERERROR":
+        return {...state,Mensaje:action.payload.Mensaje}
+      case "CARGARUBROS":
+        return {...state,rubros:action.payload}
+      case "ACTUALIZAR":
+        return {...state,gastos:action.payload}
       default:
         return state;
     } 

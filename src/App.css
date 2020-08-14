@@ -1,6 +1,12 @@
-html,body{
+html,body,#root{
   height:100%;
+  color:#fefefe;
 }
+
+label{
+  color:#fefefe;
+}
+
 .App {
   text-align: center;
 }
@@ -44,26 +50,31 @@ li{
   list-style-type: none;
 }
 
-.verde{
-  background-color: #33cc33;
-}
-
-#root{
-  display:flex;
-  align-items:center;
+.Fondo{
   background-color: #12161f;
   height:100%;
   width: 100%;
 }
 
-#DivTabla{
-  margin:0 auto 0 auto;
-  background-color:#2e3442;
-  padding:1.4%;
+#LoginDiv{
+  display:flex;
+  align-items:center;
 }
 
-td{
-  width:180px;
+.Elemento{
+  background-color:#2e3442;
+  padding:1.4%;
+  margin: 10px 10px 0 0;
+}
+
+#AltaGasto{
+  text-align: center;
+}
+table{
+  margin:0 5px 0 0;
+}
+#LoginDiv td{
+  width:145px;
   text-align:right;
 }
 
@@ -73,7 +84,7 @@ td{
 
 h4{
   text-align: center;
-  color:#fefefe;
+  
 }
 
 label{
@@ -81,14 +92,34 @@ label{
   width: 400px;
 }
 
-input{
+#LoginDiv input{
+  font-size: 16px;
+}
+
+input,select{
   border:none;
   background-color: #43485a;
   color:#fefefe;
   padding:6px;
-  font-size: 16px;
+  font-size:14px
 }
 
+select{
+  width:100%;
+}
+.izquierda{
+  width:65px;
+}
 input[type="button"]{
   margin:10px 0 0 0;
+  padding:6px;
 }
+
+#ListaGastos input[type="button"]{
+  margin:0;
+}
+
+abbr{
+  text-decoration:none;
+}
+
